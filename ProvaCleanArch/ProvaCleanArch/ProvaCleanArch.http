@@ -1,0 +1,6 @@
+@ProvaCleanArch_HostAddress = http://localhost:5089
+
+GET {{ProvaCleanArch_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
