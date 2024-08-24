@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("ProvaCleanArch")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("ProvaCleanArch.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bde34c51fc3620158cbf714f89ddd9ee64fa294c")]
-[assembly: System.Reflection.AssemblyProductAttribute("ProvaCleanArch")]
-[assembly: System.Reflection.AssemblyTitleAttribute("ProvaCleanArch")]
+[assembly: System.Reflection.AssemblyProductAttribute("ProvaCleanArch.Api")]
+[assembly: System.Reflection.AssemblyTitleAttribute("ProvaCleanArch.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
