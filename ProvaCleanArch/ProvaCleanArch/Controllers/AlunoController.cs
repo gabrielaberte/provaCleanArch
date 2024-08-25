@@ -17,17 +17,17 @@ namespace AmbevConexao.API.Controllers
             _repository = new AlunoRepository();
         }
 
-        //[HttpGet]
-        //public IEnumerable<Aluno> Get()
-        //{
-        //    return _repository.SelecionarTudo();
-        //}
+        [HttpGet]
+        public IEnumerable<Aluno> Get()
+        {
+            return _repository.SelecionarTudo();
+        }
 
-        //[HttpGet("{id}")]
-        //public Aluno Get(Guid id)
-        //{
-        //    return _repository.Selecionar(id);
-        //}
+        [HttpGet("{id}")]
+        public Aluno Get(Guid id)
+        {
+            return _repository.Selecionar(id);
+        }
 
         [HttpPost]
         public IEnumerable<Aluno> Post([FromBody] AlunoDto alunoDto)
@@ -39,22 +39,16 @@ namespace AmbevConexao.API.Controllers
             return _repository.SelecionarTudo();
         }
 
-        //[HttpPut("{id}")]
-        //public Aluno Put(int id, [FromBody] AlunoDto alunoDto)
-        //{
-        //    var alunoEntidade = _repository.Selecionar(id);
+        [HttpPut("{id}")]
+        public Aluno Put(Guid id)
+        {
+            var alunoEntidade = _repository.Selecionar(id);
 
-        //    alunoEntidade.AlterarNome(alunoDto.Nome);
+            alunoEntidade.Desativar();
 
-        //    _repository.Alterar(alunoEntidade);
+            _repository.Alterar(alunoEntidade);
 
-        //    return alunoEntidade;
-        //}
-
-        //[HttpDelete("{id}")]
-        //public void Delete(int id)
-        //{
-        //    _repository.Excluir(id);
-        //}
+            return alunoEntidade;
+        }
     }
 }

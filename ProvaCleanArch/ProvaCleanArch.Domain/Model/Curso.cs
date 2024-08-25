@@ -2,11 +2,11 @@
 {
     public class Curso
     {
-        public int Id { get; private set; }
-        public string Titulo { get; private set; }
-        public string Descricao { get; private set; }
+        public int Id { get;  set; }
+        public string Titulo { get;  set; }
+        public string Descricao { get;  set; }
         public int Vagas { get; set; } = 30;
-        public bool Ativo { get; private set; }
+        public bool Ativo { get;  set; }
 
         public List<Matricula> Matriculas { get; set; }
 
@@ -15,17 +15,18 @@
 
         public DateTime DataInicio { get; set; }
 
-        public Curso(int id, string titulo, string descricao, int vagas, Professor professor, DateTime dataInicio)
+        public static Curso novoCurso(string titulo, string descricao, int vagas, Professor professor, DateTime dataInicio)
         {
-            Id = id;
-            Titulo = titulo;
-            Descricao = descricao;
-            Vagas = vagas;
-            Professor = professor;
-            ProfessorId = professor.Id;
-            Ativo = true;
-            Matriculas = new List<Matricula>();
-            DataInicio = dataInicio;
+            var curso = new Curso();
+            curso.Titulo = titulo;
+            curso.Descricao = descricao;
+            curso.Vagas = vagas;
+            curso.Professor = professor;
+            curso.ProfessorId = professor.Id;
+            curso.Ativo = true;
+            curso.Matriculas = new List<Matricula>();
+            curso.DataInicio = dataInicio;
+            return curso;
         }
 
         public void Desativar()

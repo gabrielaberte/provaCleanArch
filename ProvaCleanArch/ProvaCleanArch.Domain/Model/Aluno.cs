@@ -18,9 +18,10 @@
             return aluno;
     }
 
-    public void Desativar()
+    public Aluno Desativar()
     {
         Ativo = false;
+        return this;
     }
 }
 
