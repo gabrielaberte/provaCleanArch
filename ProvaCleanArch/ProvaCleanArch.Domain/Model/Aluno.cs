@@ -1,8 +1,8 @@
 ﻿namespace ProvaCleanArch.Domain.Model
 {
-    public class Aluno
+    public class Aluno : IEntity
 {
-    public int Id { get; private set; }
+    public Guid Id { get; private set; }
     public string Nome { get; private set; }
     public string Email { get; private set; }
     public string Endereco { get; private set; }
@@ -10,7 +10,7 @@
 
     public List<Matricula> Matriculas;
 
-    public Aluno(int id, string nome, string email, string endereco)
+    public Aluno(Guid id, string nome, string email, string endereco)
     {
         Id = id;
         Nome = nome;

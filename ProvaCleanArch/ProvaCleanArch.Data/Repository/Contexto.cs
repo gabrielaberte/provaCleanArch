@@ -4,7 +4,9 @@ using ProvaCleanArch.Domain.Model;
 
 namespace ProvaCleanArch.Data
 {
+        //DBContext serve para: configura modelo de dados; gerencia a conexao com o banco; consulta e persiste os dados no banco; rastreia ojetos;
     public class Contexto : DbContext
+
     {
         public DbSet<Aluno> Aluno { get; set; }
         public DbSet<Professor> Professor { get; set; }

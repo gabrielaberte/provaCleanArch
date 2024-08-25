@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ProvaCleanArch.Domain.Model;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using ProvaCleanArch.Domain.Model;
 
 namespace ProvaCleanArch.Data.Map
 {

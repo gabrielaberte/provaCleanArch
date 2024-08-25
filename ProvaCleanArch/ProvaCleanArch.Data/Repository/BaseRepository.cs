@@ -1,4 +1,6 @@
-﻿namespace ProvaCleanArch.Data.Repository
+﻿using ProvaCleanArch.Domain.Model;
+
+namespace ProvaCleanArch.Data.Repository
 {
     public class Baserepository<T> where T : class, IEntity
     {
