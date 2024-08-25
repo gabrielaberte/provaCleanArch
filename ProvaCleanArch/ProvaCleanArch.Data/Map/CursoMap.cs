@@ -19,12 +19,13 @@ namespace ProvaCleanArch.Data.Map
             builder.Property(x => x.Ativo).IsRequired();
 
             builder.Property(x => x.Vagas).IsRequired();
+            
+            //um curso pode ter varias matriculas e um unico professor
+            //nao conseguimos fazer os relacionamentos entre as tabelas :(
 
-            //builder.HasOne(x => x.Aluno).WithMany(x => x.Aluno).HasForeignKey(x => x.IdAluno);
+            builder.HasOne(x => x.Professor).WithMany().HasForeignKey(x => x.ProfessorId);
 
-            //builder.HasOne(x => x.Professor).HasForeignKey(x => x.IdProfessor);
-
-            //.HasOne(x => x.Matriculas).HasForeignKey(x => x.IdMatricula);
+            builder.HasOne(x => x.Matriculas).WithMany().HasForeignKey(x => x.Matriculas);
         }
     }
 }

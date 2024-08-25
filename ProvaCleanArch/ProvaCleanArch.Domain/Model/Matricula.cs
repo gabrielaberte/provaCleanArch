@@ -12,11 +12,9 @@
         public Guid CursoId { get; private set; }
         public Curso Curso { get; private set; }
 
-        public Matricula(Guid id, Aluno aluno, Curso curso)
+        public Matricula(Guid alunoId, Curso curso)
         {
-            Id = id;
-            Aluno = aluno;
-            AlunoId = aluno.Id;
+            AlunoId = alunoId;
             Curso = curso;
             DataMatricula = DateTime.Now;
             Status = StatusMatricula.Ativa;
@@ -41,8 +39,6 @@
             Status = StatusMatricula.Cancelada;
 
         }
-
-
     }
 
     public enum StatusMatricula

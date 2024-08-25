@@ -6,26 +6,25 @@
         public string Titulo { get;  set; }
         public string Descricao { get;  set; }
         public int Vagas { get; set; } = 30;
-        public bool Ativo { get;  set; }
-
+        public bool Ativo { get; set; } = true;
+        public Guid ProfessorId { get; set; }
+        public Professor Professor { get; set; }
+        public DateTime DataInicio { get; set; }
         public List<Matricula> Matriculas { get; set; }
 
-        public Guid ProfessorId { get; private set; }
-        public Professor Professor { get; private set; }
-
-        public DateTime DataInicio { get; set; }
-
-        public static Curso novoCurso(string titulo, string descricao, Professor professor, DateTime dataInicio)
+        public Curso(string titulo, string descricao, Guid professorId, DateTime dataInicio)
         {
-            var curso = new Curso();
-            curso.Titulo = titulo;
-            curso.Descricao = descricao;
-            curso.Professor = professor;
-            curso.ProfessorId = professor.Id;
-            curso.Ativo = true;
-            curso.Matriculas = new List<Matricula>();
-            curso.DataInicio = dataInicio;
-            return curso;
+            Titulo = titulo;
+            Descricao = descricao;
+            ProfessorId = professorId;
+            DataInicio = dataInicio;
+            Matriculas = new List<Matricula>();
+        }
+
+        public void SetProfessor(Professor professor)
+        {
+            ProfessorId = professor.Id;
+            Professor = professor;
         }
 
         public void Desativar()
