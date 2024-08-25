@@ -1,16 +1,17 @@
 ﻿namespace ProvaCleanArch.Domain.Model
 {
-    public class Professor
+    public class Professor : IEntity
     {
-        public int Id { get; private set; }
-        public string Nome { get; private set; }
-        public string Email { get; private set; }
+        public Guid Id { get; private set; }
+        public string Nome { get; set; }
+        public string Email { get; set; }
 
-        public Professor(int id, string nome, string email)
+        public static Professor novoProfessor(string nome, string email)
         {
-            Id = id;
-            Nome = nome;
-            Email = email;
+            var professor = new Professor();
+            professor.Nome = nome;
+            professor.Email = email;
+            return professor;
         }
     }
 }

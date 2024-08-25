@@ -4,7 +4,7 @@ using ProvaCleanArch.Api.Dto;
 using ProvaCleanArch.Data.Repository;
 using ProvaCleanArch.Domain.Model;
 
-namespace AmbevConexao.API.Controllers
+namespace ProvaCleanArch.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

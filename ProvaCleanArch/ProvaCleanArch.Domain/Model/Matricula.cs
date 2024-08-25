@@ -2,23 +2,22 @@
 {
     public class Matricula
     {
-        public int Id { get; private set; }
+        public Guid Id { get; private set; }
         public DateTime DataMatricula { get; private set; }
         public StatusMatricula Status { get; private set; }
 
         public Guid AlunoId { get; private set; }
         public Aluno Aluno { get; private set; }
 
-        public int CursoId { get; private set; }
+        public Guid CursoId { get; private set; }
         public Curso Curso { get; private set; }
 
-        public Matricula(int id, Aluno aluno, Curso curso)
+        public Matricula(Guid id, Aluno aluno, Curso curso)
         {
             Id = id;
             Aluno = aluno;
             AlunoId = aluno.Id;
             Curso = curso;
-            CursoId = curso.Id;
             DataMatricula = DateTime.Now;
             Status = StatusMatricula.Ativa;
         }
