@@ -2,22 +2,20 @@
 {
     public class Aluno : IEntity
 {
-    public Guid Id { get; private set; }
-    public string Nome { get; private set; }
-    public string Email { get; private set; }
-    public string Endereco { get; private set; }
-    public bool Ativo { get; private set; }
+    public Guid Id { get;  set; }
+    public string Nome { get;  set; }
+    public string Email { get;  set; }
+    public string Endereco { get;  set; }
+    public bool Ativo { get;  set; }
 
-    public List<Matricula> Matriculas;
-
-    public Aluno(Guid id, string nome, string email, string endereco)
+    public static Aluno NovoAluno(string nome, string email, string endereco)
     {
-        Id = id;
-        Nome = nome;
-        Email = email;
-        Endereco = endereco;
-        Ativo = true;
-        Matriculas = new List<Matricula>();
+        var aluno = new Aluno();
+        aluno.Nome = nome;
+        aluno.Email = email;
+        aluno.Endereco = endereco;
+        aluno.Ativo = true;
+            return aluno;
     }
 
     public void Desativar()

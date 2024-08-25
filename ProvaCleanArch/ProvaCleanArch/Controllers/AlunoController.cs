@@ -1,5 +1,6 @@
 
 using Microsoft.AspNetCore.Mvc;
+using ProvaCleanArch.Api.Dto;
 using ProvaCleanArch.Data.Repository;
 using ProvaCleanArch.Domain.Model;
 
@@ -16,27 +17,27 @@ namespace AmbevConexao.API.Controllers
             _repository = new AlunoRepository();
         }
 
-        [HttpGet]
-        public IEnumerable<Aluno> Get()
-        {
-            return _repository.SelecionarTudo();
-        }
-
-        [HttpGet("{id}")]
-        public Aluno Get(Guid id)
-        {
-            return _repository.Selecionar(id);
-        }
-
-        //[HttpPost]
-        //public IEnumerable<Aluno> Post([FromBody] AlunoDto alunoDto)
+        //[HttpGet]
+        //public IEnumerable<Aluno> Get()
         //{
-        //    var alunoEntidade = Aluno.NovoAluno(alunoDto.Nome);
-
-        //    _repository.Incluir(alunoEntidade);
-
         //    return _repository.SelecionarTudo();
         //}
+
+        //[HttpGet("{id}")]
+        //public Aluno Get(Guid id)
+        //{
+        //    return _repository.Selecionar(id);
+        //}
+
+        [HttpPost]
+        public IEnumerable<Aluno> Post([FromBody] AlunoDto alunoDto)
+        {
+            var alunoEntidade = Aluno.NovoAluno(alunoDto.Nome, alunoDto.Email, alunoDto.Endereco);
+
+            _repository.Incluir(alunoEntidade);
+
+            return _repository.SelecionarTudo();
+        }
 
         //[HttpPut("{id}")]
         //public Aluno Put(int id, [FromBody] AlunoDto alunoDto)

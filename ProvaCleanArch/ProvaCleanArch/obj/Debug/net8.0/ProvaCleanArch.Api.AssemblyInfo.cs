@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProvaCleanArch.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be6cca18541d13aa833af28f24c5c276600d4463")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b25d88cc878bdd738450f8c9bb657f1430422a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProvaCleanArch.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProvaCleanArch.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -6,7 +6,7 @@
         public DateTime DataMatricula { get; private set; }
         public StatusMatricula Status { get; private set; }
 
-        public int AlunoId { get; private set; }
+        public Guid AlunoId { get; private set; }
         public Aluno Aluno { get; private set; }
 
         public int CursoId { get; private set; }

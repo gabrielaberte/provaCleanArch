@@ -10,10 +10,10 @@ namespace ProvaCleanArch.Data.Map
         {
             builder.ToTable("Aluno");
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Nome).IsRequired();
+            builder.Property(x => x.Nome).HasColumnType("nvarchar(150)").IsRequired();
             builder.Property(x => x.Ativo).IsRequired();
-            builder.Property(x => x.Email).IsRequired();
-            builder.Property(x => x.Endereco).IsRequired();
+            builder.Property(x => x.Email).HasColumnType("nvarchar(150)").IsRequired();
+            builder.Property(x => x.Endereco).HasColumnType("nvarchar(150)").IsRequired();
         }
 
     }
