@@ -1,0 +1,15 @@
+C:\Users\gabriela.berte\Documentos\Aula\provaCleanArch\ProvaCleanArch\ProvaCleanArch.Domain\bin\Debug\net8.0\ProvaCleanArch.Domain.deps.json
+C:\Users\gabriela.berte\Documentos\Aula\provaCleanArch\ProvaCleanArch\ProvaCleanArch.Domain\bin\Debug\net8.0\ProvaCleanArch.Domain.runtimeconfig.json
+C:\Users\gabriela.berte\Documentos\Aula\provaCleanArch\ProvaCleanArch\ProvaCleanArch.Domain\bin\Debug\net8.0\ProvaCleanArch.Domain.dll
+C:\Users\gabriela.berte\Documentos\Aula\provaCleanArch\ProvaCleanArch\ProvaCleanArch.Domain\bin\Debug\net8.0\ProvaCleanArch.Domain.pdb
+C:\Users\gabriela.berte\Documentos\Aula\provaCleanArch\ProvaCleanArch\ProvaCleanArch.Domain\obj\Debug\net8.0\ProvaCleanArch.Domain.csproj.AssemblyReference.cache
+C:\Users\gabriela.berte\Documentos\Aula\provaCleanArch\ProvaCleanArch\ProvaCleanArch.Domain\obj\Debug\net8.0\ProvaCleanArch.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabriela.berte\Documentos\Aula\provaCleanArch\ProvaCleanArch\ProvaCleanArch.Domain\obj\Debug\net8.0\ProvaCleanArch.Domain.AssemblyInfoInputs.cache
+C:\Users\gabriela.berte\Documentos\Aula\provaCleanArch\ProvaCleanArch\ProvaCleanArch.Domain\obj\Debug\net8.0\ProvaCleanArch.Domain.AssemblyInfo.cs
+C:\Users\gabriela.berte\Documentos\Aula\provaCleanArch\ProvaCleanArch\ProvaCleanArch.Domain\obj\Debug\net8.0\ProvaCleanArch.Domain.csproj.CoreCompileInputs.cache
+C:\Users\gabriela.berte\Documentos\Aula\provaCleanArch\ProvaCleanArch\ProvaCleanArch.Domain\obj\Debug\net8.0\ProvaCleanArch.Domain.sourcelink.json
+C:\Users\gabriela.berte\Documentos\Aula\provaCleanArch\ProvaCleanArch\ProvaCleanArch.Domain\obj\Debug\net8.0\ProvaCleanArch.Domain.dll
+C:\Users\gabriela.berte\Documentos\Aula\provaCleanArch\ProvaCleanArch\ProvaCleanArch.Domain\obj\Debug\net8.0\refint\ProvaCleanArch.Domain.dll
+C:\Users\gabriela.berte\Documentos\Aula\provaCleanArch\ProvaCleanArch\ProvaCleanArch.Domain\obj\Debug\net8.0\ProvaCleanArch.Domain.pdb
+C:\Users\gabriela.berte\Documentos\Aula\provaCleanArch\ProvaCleanArch\ProvaCleanArch.Domain\obj\Debug\net8.0\ProvaCleanArch.Domain.genruntimeconfig.cache
+C:\Users\gabriela.berte\Documentos\Aula\provaCleanArch\ProvaCleanArch\ProvaCleanArch.Domain\obj\Debug\net8.0\ref\ProvaCleanArch.Domain.dll
