@@ -7,6 +7,7 @@
     public string Email { get;  set; }
     public string Endereco { get;  set; }
     public bool Ativo { get;  set; }
+    public List<Matricula> Matriculas { get; set; }
 
     public static Aluno NovoAluno(string nome, string email, string endereco)
     {
@@ -15,6 +16,7 @@
         aluno.Email = email;
         aluno.Endereco = endereco;
         aluno.Ativo = true;
+        aluno.Matriculas = new List<Matricula>();
             return aluno;
     }
 

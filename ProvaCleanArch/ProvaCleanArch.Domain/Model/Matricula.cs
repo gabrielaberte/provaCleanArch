@@ -1,9 +1,9 @@
 ﻿namespace ProvaCleanArch.Domain.Model
 {
-    public class Matricula
+    public class Matricula : IEntity
     {
         public Guid Id { get; private set; }
-        public DateTime DataMatricula { get; private set; }
+        public DateTime DataMatricula { get; set; }
         public StatusMatricula Status { get; private set; }
 
         public Guid AlunoId { get; private set; }
@@ -12,12 +12,17 @@
         public Guid CursoId { get; private set; }
         public Curso Curso { get; private set; }
 
-        public Matricula(Guid alunoId, Curso curso)
+        public Matricula(Guid alunoId, Guid cursoId)
         {
             AlunoId = alunoId;
-            Curso = curso;
+            CursoId = cursoId;
             DataMatricula = DateTime.Now;
             Status = StatusMatricula.Ativa;
+        }
+
+        public void SetCurso(Curso curso)
+        {
+            Curso = curso;
         }
 
         public void ConcluirMatricula(Matricula matricula)

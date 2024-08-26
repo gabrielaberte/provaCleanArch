@@ -10,8 +10,8 @@ namespace ProvaCleanArch.Data
     {
         public DbSet<Aluno> Aluno { get; set; }
         public DbSet<Professor> Professor { get; set; }
-        //public DbSet<Curso> Curso { get; set; }
-        //public DbSet<Matricula> Matricula { get; set; }
+        public DbSet<Curso> Curso { get; set; }
+        public DbSet<Matricula> Matricula { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -27,8 +27,8 @@ namespace ProvaCleanArch.Data
         {
             modelBuilder.ApplyConfiguration(new AlunoMap());
             modelBuilder.ApplyConfiguration(new ProfessorMap());
-            //modelBuilder.ApplyConfiguration(new MatriculaMap());
-            //modelBuilder.ApplyConfiguration(new CursoMap());
+            modelBuilder.ApplyConfiguration(new CursoMap());
+            modelBuilder.ApplyConfiguration(new MatriculaMap());
 
             base.OnModelCreating(modelBuilder);
         }

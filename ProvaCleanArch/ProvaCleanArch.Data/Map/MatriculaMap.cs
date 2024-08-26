@@ -16,7 +16,13 @@ namespace ProvaCleanArch.Data.Map
 
             builder.Property(x => x.Status).IsRequired();
 
-            //builder.HasOne(x => x.Curso).WithMany(x => x.Aluno).HasForeignKey(x => x.IdCurso);
+            builder.HasOne(x => x.Curso) //1 matricula tem 1 curso
+                    .WithMany(x => x.Matriculas) //1 curso tem varias matriculas
+                    .HasForeignKey(x => x.CursoId); //unidos pelo cursoId
+           
+            builder.HasOne(x => x.Aluno) //1 matricula tem 1 aluno
+                    .WithMany(x => x.Matriculas) //1 aluno tem varias Matriculas
+                    .HasForeignKey(x =>x.AlunoId); //unidos pelo alunoid
         }
     }
 }

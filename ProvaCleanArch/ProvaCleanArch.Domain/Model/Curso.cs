@@ -1,6 +1,6 @@
 ﻿namespace ProvaCleanArch.Domain.Model
 {
-    public class Curso
+    public class Curso : IEntity
     {
         public Guid Id { get;  set; }
         public string Titulo { get;  set; }

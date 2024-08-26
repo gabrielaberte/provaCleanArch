@@ -16,16 +16,17 @@ namespace ProvaCleanArch.Data.Map
 
             builder.Property(x => x.Descricao).IsRequired();
 
-            builder.Property(x => x.Ativo).IsRequired();
+            builder.Property(x => x.Ativo);
 
-            builder.Property(x => x.Vagas).IsRequired();
-            
-            //um curso pode ter varias matriculas e um unico professor
-            //nao conseguimos fazer os relacionamentos entre as tabelas :(
+            builder.Property(x => x.Vagas);
 
-            builder.HasOne(x => x.Professor).WithMany().HasForeignKey(x => x.ProfessorId);
+            builder.HasMany(x => x.Matriculas) //1 curso tem varias matriculas
+                   .WithOne(x => x.Curso) //mas cada matricula tem 1 curso so
+                   .HasForeignKey(x => x.CursoId); //relaciona as matriculas com o curso (conecta os 2)
 
-            builder.HasOne(x => x.Matriculas).WithMany().HasForeignKey(x => x.Matriculas);
+            builder.HasOne(x => x.Professor) //1 curso tem 1 professor
+                    .WithMany(x => x.Cursos) //1 professor tem varios cursos
+                    .HasForeignKey(x => x.ProfessorId); //relaciona o id do professor com o curso especifico
         }
     }
 }

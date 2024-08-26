@@ -20,8 +20,9 @@ namespace ProvaCleanArch.Data.Map
 
             builder.Property(x => x.Email).IsRequired();
 
-            //builder.HasOne(x => x.Professor).WithMany(x => x.Curso).HasForeignKey(x => x.IdCurso);
-
+            builder.HasMany(x => x.Cursos) //1 professor tem varios cursos
+                   .WithOne(x => x.Professor) //cada curso tem 1 professor
+                   .HasForeignKey(x => x.ProfessorId); //conectados pelo professorId
         }
 
     }
